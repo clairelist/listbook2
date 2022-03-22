@@ -56,7 +56,8 @@ function App() {
       }).catch(err=>{
         console.error(err);
       })
-  },[])
+  },[]) //eslint-disable-line 
+  // --> empty dependancy array, 'only do this on first load of component'. Eslint is a liar, removing this breaks the component, adding users obj to it causes infinite loop of calls.
 
   return (
     <div className="App">
